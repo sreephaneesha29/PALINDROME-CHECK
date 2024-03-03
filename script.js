@@ -1,7 +1,7 @@
 const checkbtn = document.getElementById("check-btn");
 const ogInput = document.getElementById("text-input");
 const result = document.getElementById("result");
-
+const date=document.querySelector("footer")
 const resetInput = () => {
     ogInput.value = "";
 };
@@ -14,7 +14,9 @@ const checkPalindrome = () => {
         alert("Please input a value");
         return;
     }
-    
+    setInterval(() => {
+ location.reload()
+}, 5000);
     
     if (processedInput === reversedInput) {
         result.innerHTML = `${inputValue.bold()} is a palindrome`;
@@ -37,3 +39,4 @@ ogInput.addEventListener("keydown", (e) => {
         checkPalindrome();
     }
 });
+date.innerHTML=Date()

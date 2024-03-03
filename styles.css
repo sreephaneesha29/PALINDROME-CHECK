@@ -7,8 +7,6 @@ font-family: sans-serif;
 body{
     background:linear-gradient(#001155,rgb(15, 8, 38));
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
 }
 #navbar{
     color: rgb(255, 255, 255);
@@ -85,4 +83,7 @@ main{
     padding: 13px;
     text-align: center;
 
+}
+footer{
+    color: white;
 }
