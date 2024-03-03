@@ -1,13 +1,13 @@
 const checkbtn = document.getElementById("check-btn");
-const oginput = document.getElementById("text-input");
+const ogInput = document.getElementById("text-input");
 const result = document.getElementById("result");
 
 const resetInput = () => {
-    oginput.value = "";
+    ogInput.value = "";
 };
 
 const checkPalindrome = () => {
-    const inputValue = oginput.value.trim();
+    const inputValue = ogInput.value.trim();
     if (inputValue === "") {
         alert("Please input a value");
         return;
@@ -31,7 +31,7 @@ checkbtn.addEventListener("click", (e) => {
     checkPalindrome();
 });
 
-oginput.addEventListener("keydown", (e) => {
+ogInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
         e.preventDefault();
         checkPalindrome();
