@@ -1,36 +1,39 @@
-let checkbtn = document.getElementById("check-btn")
-let oginput = document.getElementById("text-input")
-let result = document.getElementById("result")
-const reset=() => { 
-   oginput.value=""
- }
-const checkPalindrom=() => { 
-    let lowerstr = (oginput.value).replace(/[^a-zA-Z0-9]/g, "").toLowerCase()
-    let reversestr = lowerstr.split("").reverse().join("")
-    if (oginput.value === "") {
-        alert("Please input a value")
+const checkbtn = document.getElementById("check-btn");
+const oginput = document.getElementById("text-input");
+const result = document.getElementById("result");
+
+const resetInput = () => {
+    oginput.value = "";
+};
+
+const checkPalindrome = () => {
+    const inputValue = oginput.value.trim();
+    if (inputValue === "") {
+        alert("Please input a value");
+        return;
     }
-    else {
-        if (lowerstr === reversestr) {
-            result.classList.remove("hide")
-            result.innerHTML=`${oginput.value.bold()} is a palindrome`
-        }
-        else {
-            result.classList.remove("hide")
-            result.innerHTML=`${oginput.value.bold()} is not a palindrome`
-        }
-        reset()
+    
+    const processedInput = inputValue.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    const reversedInput = processedInput.split("").reverse().join("");
+    
+    if (processedInput === reversedInput) {
+        result.innerHTML = `${inputValue.bold()} is a palindrome`;
+    } else {
+        result.innerHTML = `${inputValue.bold()} is not a palindrome`;
     }
- }
+    
+    result.classList.remove("hide");
+    resetInput();
+};
 
 checkbtn.addEventListener("click", (e) => {
-    e.preventDefault()
-    checkPalindrom()
-})
+    e.preventDefault();
+    checkPalindrome();
+});
 
-oginput.addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-        checkPalindrom();
-     reset()
+oginput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        e.preventDefault();
+        checkPalindrome();
     }
-  });
+});
