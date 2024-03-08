@@ -5,7 +5,8 @@ box-sizing:border-box;
 font-family: sans-serif;
 }
 body{
-    background:linear-gradient(#001155,rgb(15, 8, 38));
+  animation: bg 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+animation-fill-mode: both;
     background-repeat: no-repeat;
 }
 #navbar{
@@ -87,4 +88,22 @@ main{
 }
 footer{
     color: white;
+}
+
+@keyframes bg{
+ 0%{
+        background: linear-gradient(50deg,#001155,rgb(15, 8, 38));
+    }
+ 
+ 
+ 40%{
+        background: linear-gradient(50deg,#550100,rgb(8, 27, 0));
+    }
+ 70%{
+        background: linear-gradient(50deg,#3a0201,rgb(14, 0, 62));
+    }
+ 100%{
+        background: linear-gradient(50deg,#550023,rgb(14, 0, 62));
+    }
+   
 }
