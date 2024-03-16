@@ -1,7 +1,7 @@
 const checkbtn = document.getElementById("check-btn");
 const ogInput = document.getElementById("text-input");
 const result = document.getElementById("result");
-const date=document.querySelector("footer")
+const foot=document.querySelector("footer")
 const resetInput = () => {
     ogInput.value = "";
 };
@@ -39,4 +39,4 @@ ogInput.addEventListener("keydown", (e) => {
         checkPalindrome();
     }
 });
-date.innerHTML=Date()
+setInterval(() => {foot.innerHTML=Date()},1000)
