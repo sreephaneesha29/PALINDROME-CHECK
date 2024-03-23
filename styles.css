@@ -6,6 +6,7 @@ font-family: sans-serif;
 }
 body{
   animation: bg 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  transition: all 3s ease;
 animation-fill-mode: both;
     background-repeat: no-repeat;
 }

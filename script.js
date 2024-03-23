@@ -40,3 +40,15 @@ ogInput.addEventListener("keydown", (e) => {
     }
 });
 setInterval(() => {foot.innerHTML=Date()},1000)
+<script>
+window.embeddedChatbotConfig = {
+chatbotId: "68n2dc-_arY4enqRI14gp",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="68n2dc-_arY4enqRI14gp"
+domain="www.chatbase.co"
+defer>
+</script>
